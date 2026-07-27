@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Services & Packages | Nuvita by Krish</title>
+  <meta name="description" content="Explore custom diet consultation programs for Weight Loss, PCOS/PCOD, Diabetes Management, Sports Nutrition, Pregnancy & Child Care with Dietitian Krish in Chennai.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo-circle.jpg" alt="Nuvita by Krish Logo" class="nav-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">NUVITA <small style="font-family: var(--font-cursive); font-size: 0.9em; font-weight: normal; color: var(--primary);">by Krish</small></span>
+          <span class="brand-subtitle">Dietitian & Nutritionist</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services & Packages</a></li>
+        <li><a href="blog.html" class="nav-link">Blog & Tips</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Call</a>
+        <button class="mobile-menu-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section style="background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-alt) 100%); padding-top: 8.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-color);">
+    <div class="container text-center">
+      <span class="section-subtitle"><i class="fa-solid fa-notes-medical"></i> Clinical & Lifestyle Diets</span>
+      <h1>Our Programs & Consultation Packages</h1>
+      <p class="section-desc">Tailored nutrition solutions rooted in science, designed around your favourite home-cooked meals.</p>
+    </div>
+  </section>
+
+  <!-- Detailed Specialization Programs Grid -->
+  <section class="services-section" style="padding: 4.5rem 0;">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Specialized Diet Programs</h2>
+        <p class="section-desc">Select a specialized program to view how we structure your meals.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Weight Loss -->
+        <div class="service-card" id="weight-loss">
+          <div class="service-img-wrap">
+            <img src="images/hero-nutrition.png" alt="Weight Loss Program">
+            <span class="service-tag">Popular</span>
+          </div>
+          <div class="service-content">
+            <h3>Weight Loss & Fat Management</h3>
+            <p>Achieve fat loss while retaining muscle mass using traditional Indian balanced meals.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Calorie & macronutrient balancing</li>
+              <li><i class="fa-solid fa-circle-check"></i> Weekly weight & inch measurement audits</li>
+              <li><i class="fa-solid fa-circle-check"></i> Restaurant dining & vacation guides</li>
+            </ul>
+            <button class="btn btn-primary trigger-whatsapp" data-package="Weight Loss Program" style="margin-top: 1rem; width: 100%;"><i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- 2. PCOS / PCOD -->
+        <div class="service-card" id="pcos">
+          <div class="service-img-wrap">
+            <img src="images/dietitian-consultation.png" alt="PCOS PCOD Nutrition">
+            <span class="service-tag">Hormone Health</span>
+          </div>
+          <div class="service-content">
+            <h3>PCOS / PCOD Management Diet</h3>
+            <p>Tackle hormone imbalances, insulin resistance, facial hair, and mood swings naturally.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Low anti-inflammatory meal charts</li>
+              <li><i class="fa-solid fa-circle-check"></i> Seed cycling & herbal tea protocols</li>
+              <li><i class="fa-solid fa-circle-check"></i> Regular period cycle restoration focus</li>
+            </ul>
+            <button class="btn btn-primary trigger-whatsapp" data-package="PCOS Management Diet" style="margin-top: 1rem; width: 100%;"><i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- 3. Diabetes Diet -->
+        <div class="service-card" id="diabetes">
+          <div class="service-img-wrap">
+            <img src="images/nuvita-infographic.jpg" alt="Diabetes Diet Management">
+            <span class="service-tag">Glycemic Control</span>
+          </div>
+          <div class="service-content">
+            <h3>Diabetes & Pre-Diabetes Diet</h3>
+            <p>Control fasting blood glucose and HbA1c levels without giving up rice or staples.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Low Glycemic Index (GI) food combinations</li>
+              <li><i class="fa-solid fa-circle-check"></i> Post-prandial spike management</li>
+              <li><i class="fa-solid fa-circle-check"></i> Diabetic friendly desserts & snacks</li>
+            </ul>
+            <button class="btn btn-primary trigger-whatsapp" data-package="Diabetes Care Program" style="margin-top: 1rem; width: 100%;"><i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- 4. Sports Nutrition -->
+        <div class="service-card" id="sports">
+          <div class="service-img-wrap">
+            <img src="images/hero-nutrition.png" alt="Sports Nutrition">
+            <span class="service-tag">Athletic Performance</span>
+          </div>
+          <div class="service-content">
+            <h3>Sports & Fitness Nutrition</h3>
+            <p>Fuel workout performance, optimize recovery times, and build lean muscle tissue efficiently.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Pre & post workout nutrition timing</li>
+              <li><i class="fa-solid fa-circle-check"></i> Protein & supplement advice (Safe & Natural)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Hydration & electrolyte strategies</li>
+            </ul>
+            <button class="btn btn-primary trigger-whatsapp" data-package="Sports Nutrition Program" style="margin-top: 1rem; width: 100%;"><i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- 5. Pregnancy & Postnatal -->
+        <div class="service-card" id="pregnancy">
+          <div class="service-img-wrap">
+            <img src="images/dietitian-consultation.png" alt="Pregnancy Diet">
+            <span class="service-tag">Maternal Care</span>
+          </div>
+          <div class="service-content">
+            <h3>Pregnancy & Postnatal Diet</h3>
+            <p>Support fetal growth during trimester stages and ensure rich milk supply post-delivery.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Iron, Folate, and Calcium rich meal plans</li>
+              <li><i class="fa-solid fa-circle-check"></i> Managing morning sickness & nausea</li>
+              <li><i class="fa-solid fa-circle-check"></i> Healthy postpartum recovery nutrition</li>
+            </ul>
+            <button class="btn btn-primary trigger-whatsapp" data-package="Pregnancy Diet Program" style="margin-top: 1rem; width: 100%;"><i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- 6. Child Nutrition & Gut Health -->
+        <div class="service-card" id="child-gut">
+          <div class="service-img-wrap">
+            <img src="images/nuvita-infographic.jpg" alt="Child Nutrition and Gut Health">
+            <span class="service-tag">Wellness</span>
+          </div>
+          <div class="service-content">
+            <h3>Child Nutrition & Gut Health Reset</h3>
+            <p>Combat picky eating, acidity, bloating, and constipation while supporting childhood immunity.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Kid-approved nutrient dense meals</li>
+              <li><i class="fa-solid fa-circle-check"></i> Microbiome & probiotic gut health repair</li>
+              <li><i class="fa-solid fa-circle-check"></i> Elimination diets for food sensitivities</li>
+            </ul>
+            <button class="btn btn-primary trigger-whatsapp" data-package="Child & Gut Health Program" style="margin-top: 1rem; width: 100%;"><i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Packages Pricing Section -->
+  <section class="packages-section" id="packages" style="padding: 4.5rem 0;">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle"><i class="fa-solid fa-tags"></i> Flexible Plans</span>
+        <h2 class="section-title">Diet Consultation Packages</h2>
+        <p class="section-desc">Choose a plan that fits your timeframe and health commitments.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- 1 Month -->
+        <div class="package-card">
+          <div class="package-header">
+            <h3>1 Month Kickstart</h3>
+            <div class="package-duration">4 Weeks Guidance</div>
+          </div>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-check"></i> Detailed 1-on-1 Initial Consultation</li>
+            <li><i class="fa-solid fa-check"></i> Personalized Meal Chart (2 Plan Revisions)</li>
+            <li><i class="fa-solid fa-check"></i> Weekly Progress Check-ins</li>
+            <li><i class="fa-solid fa-check"></i> WhatsApp Support (Mon - Sat)</li>
+            <li><i class="fa-solid fa-check"></i> Healthy Recipe Guide</li>
+          </ul>
+          <button class="btn btn-outline trigger-whatsapp" data-package="1 Month Kickstart Package" style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> Select 1 Month Plan</button>
+        </div>
+
+        <!-- 3 Month Transformation (Popular) -->
+        <div class="package-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <div class="package-header">
+            <h3>3 Month Transformation</h3>
+            <div class="package-duration">12 Weeks Complete Overhaul</div>
+          </div>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-check"></i> In-depth Medical & Lifestyle Analysis</li>
+            <li><i class="fa-solid fa-check"></i> Dynamic Bi-Weekly Meal Revisions</li>
+            <li><i class="fa-solid fa-check"></i> Weekly Call & Body Metric Tracking</li>
+            <li><i class="fa-solid fa-check"></i> Priority WhatsApp Support</li>
+            <li><i class="fa-solid fa-check"></i> Dining Out & Travel Diet Playbook</li>
+            <li><i class="fa-solid fa-check"></i> PCOS / Diabetes / Weight Loss Specialist Protocol</li>
+          </ul>
+          <button class="btn btn-primary trigger-whatsapp" data-package="3 Month Transformation Package" style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> Select 3 Month Plan</button>
+        </div>
+
+        <!-- 6 Month Lifestyle -->
+        <div class="package-card">
+          <div class="package-header">
+            <h3>6 Month Lifestyle Reset</h3>
+            <div class="package-duration">24 Weeks Total Mastery</div>
+          </div>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-check"></i> Complete Metabolic & Lifestyle Overhaul</li>
+            <li><i class="fa-solid fa-check"></i> Monthly Lab Test & Biomarker Audits</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited Diet Customizations</li>
+            <li><i class="fa-solid fa-check"></i> 24/7 VIP Chat Support</li>
+            <li><i class="fa-solid fa-check"></i> Maintenance Phase Transition Plan</li>
+          </ul>
+          <button class="btn btn-outline trigger-whatsapp" data-package="6 Month Reset Package" style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> Select 6 Month Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before & After Filterable Gallery -->
+  <section class="gallery-section" id="gallery" style="padding: 4.5rem 0;">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle"><i class="fa-solid fa-images"></i> Results Gallery</span>
+        <h2 class="section-title">Before & After Client Milestones</h2>
+        <p class="section-desc">Filter client achievements by condition to see what you can expect.</p>
+      </div>
+
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Results</button>
+        <button class="filter-btn" data-filter="weight-loss">Weight Loss</button>
+        <button class="filter-btn" data-filter="pcos">PCOS & PCOD</button>
+        <button class="filter-btn" data-filter="diabetes">Diabetes Care</button>
+        <button class="filter-btn" data-filter="sports">Sports Fit</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="transformation-card" data-category="weight-loss">
+          <div class="transformation-img-box">
+            <i class="fa-solid fa-weight-scale" style="font-size: 2.8rem; color: var(--primary);"></i>
+            <div class="stat-badge-group">
+              <span class="metric-pill">-14 kg (78kg to 64kg)</span>
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4>Meera N., Chennai</h4>
+            <p>Achieved weight target within 90 days following a balanced rice and idli-friendly diet plan.</p>
+          </div>
+        </div>
+
+        <div class="transformation-card" data-category="pcos">
+          <div class="transformation-img-box">
+            <i class="fa-solid fa-leaf" style="font-size: 2.8rem; color: var(--secondary);"></i>
+            <div class="stat-badge-group">
+              <span class="metric-pill">PCOS Reversed</span>
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4>Pooja K., IT Professional</h4>
+            <p>Overcame chronic fatigue and irregular cycles without birth control pills.</p>
+          </div>
+        </div>
+
+        <div class="transformation-card" data-category="diabetes">
+          <div class="transformation-img-box">
+            <i class="fa-solid fa-heart-pulse" style="font-size: 2.8rem; color: var(--primary);"></i>
+            <div class="stat-badge-group">
+              <span class="metric-pill">HbA1c: 7.9 &rarr; 5.8</span>
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4>Sundaram M., 52</h4>
+            <p>Controlled type-2 diabetes naturally through carb pairing techniques.</p>
+          </div>
+        </div>
+
+        <div class="transformation-card" data-category="sports">
+          <div class="transformation-img-box">
+            <i class="fa-solid fa-dumbbell" style="font-size: 2.8rem; color: var(--secondary);"></i>
+            <div class="stat-badge-group">
+              <span class="metric-pill">+4kg Lean Muscle</span>
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4>Karthik R., Marathon Runner</h4>
+            <p>Optimized race endurance and muscle synthesis with targeted macro timing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/918000000000?text=Hi%20Nuvita%20by%20Krish!%20I%20have%20questions%20about%20your%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="tooltip-text">Chat with Dietitian Krish</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <img src="images/logo-circle.jpg" alt="Nuvita Logo" class="nav-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">NUVITA <small style="font-family: var(--font-cursive); color: var(--primary);">by Krish</small></span>
+              <span class="brand-subtitle" style="color: var(--primary);">Dietitian & Nutritionist</span>
+            </div>
+          </a>
+          <p>Helping you build healthier habits, not temporary diets. Eat Smart. Live Better.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/nuvitabykrish" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/918000000000" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:nuvitabykrish@gmail.com" class="social-link"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Krish</a></li>
+            <li><a href="services.html">Services & Packages</a></li>
+            <li><a href="blog.html">Blog & Tips</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Weight Loss Program</a></li>
+            <li><a href="services.html">PCOS / PCOD Diet</a></li>
+            <li><a href="services.html">Diabetes Care Diet</a></li>
+            <li><a href="services.html">Sports Nutrition</a></li>
+            <li><a href="services.html">Pregnancy Diet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot" style="color: var(--primary); margin-right: 0.5rem;"></i> Chennai, Tamil Nadu</li>
+            <li><i class="fa-regular fa-envelope" style="color: var(--primary); margin-right: 0.5rem;"></i> nuvitabykrish@gmail.com</li>
+            <li><i class="fa-brands fa-instagram" style="color: var(--primary); margin-right: 0.5rem;"></i> @nuvitabykrish</li>
+            <li><i class="fa-brands fa-whatsapp" style="color: var(--primary); margin-right: 0.5rem;"></i> +91 8*********</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nuvita by Krish. All rights reserved.</p>
+        <p>Designed with care for better nutrition.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
