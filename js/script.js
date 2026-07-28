@@ -135,6 +135,11 @@ function initContactForm() {
       const service = document.getElementById('formService')?.value || 'Diet Consultation';
       const message = document.getElementById('formMessage')?.value.trim();
 
+      // Send conversion event to Google Analytics
+      trackGAEvent('submit_consultation_form', {
+        program_selected: service
+      });
+
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
@@ -175,14 +180,22 @@ function initContactForm() {
    6. WhatsApp Direct Consultation Builder
    ========================================================================== */
 function initWhatsAppBuilder() {
-  const waButtons = document.querySelectorAll('.trigger-whatsapp');
+  const waButtons = document.querySelectorAll('.trigger-whatsapp, .whatsapp-float');
 
   waButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      const packageType = btn.getAttribute('data-package') || 'Diet Consultation';
-      const customMessage = `Hi Dietitian Krish (Nuvita)! I am interested in booking the "${packageType}" program. Please guide me with consultation details.`;
-      const waUrl = `https://wa.me/918000000000?text=${encodeURIComponent(customMessage)}`;
-      window.open(waUrl, '_blank');
+      const packageType = btn.getAttribute('data-package') || 'General WhatsApp Contact';
+      
+      // Send conversion event to Google Analytics
+      trackGAEvent('click_whatsapp', {
+        package_name: packageType
+      });
+
+      if (btn.classList.contains('trigger-whatsapp')) {
+        const customMessage = `Hi Dietitian Krish (Nuvita)! I am interested in booking the "${packageType}" program. Please guide me with consultation details.`;
+        const waUrl = `https://wa.me/918000000000?text=${encodeURIComponent(customMessage)}`;
+        window.open(waUrl, '_blank');
+      }
     });
   });
 }
@@ -212,3 +225,14 @@ function initScrollAnimations() {
     });
   }
 }
+
+/* ==========================================================================
+   8. Google Analytics Event Tracking Helper
+   ========================================================================== */
+function trackGAEvent(eventName, eventParams = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+    console.log(`[Google Analytics Event Tracked]: ${eventName}`, eventParams);
+  }
+}
+

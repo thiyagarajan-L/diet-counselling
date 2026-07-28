@@ -62,6 +62,19 @@ diet-counselling/
 
 ---
 
+## 📊 Google Analytics 4 (GA4) Integration
+
+Google Analytics 4 (`gtag.js`) is installed and active across all HTML pages (`index.html`, `about.html`, `services.html`, `blog.html`, `contact.html`).
+
+- **Active Measurement ID**: `G-9WJXYG3HTG`
+
+### Custom Conversion Tracking Included:
+The website automatically tracks key user conversions into Google Analytics:
+- `click_whatsapp`: Fires whenever a user clicks any WhatsApp contact or consultation button (includes program name).
+- `submit_consultation_form`: Fires when a user submits the consultation booking form (includes program selected).
+
+---
+
 ## 🚀 How to Run Locally
 
 You can launch a local web server using Python or Node.js:
