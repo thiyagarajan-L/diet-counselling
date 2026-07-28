@@ -163,7 +163,7 @@ function initContactForm() {
 
         // Trigger custom direct WhatsApp link launch option
         const whatsappMsg = `Hi Nuvita by Krish! My name is ${name}. I submitted a request for ${service}. Phone: ${phone}. Note: ${message}`;
-        const encodedUrl = `https://wa.me/918000000000?text=${encodeURIComponent(whatsappMsg)}`;
+        const encodedUrl = `https://wa.me/918610530654?text=${encodeURIComponent(whatsappMsg)}`;
         
         setTimeout(() => {
           if (confirm('Would you also like to open WhatsApp directly to start chatting with Dietitian Krish immediately?')) {
@@ -193,7 +193,7 @@ function initWhatsAppBuilder() {
 
       if (btn.classList.contains('trigger-whatsapp')) {
         const customMessage = `Hi Dietitian Krish (Nuvita)! I am interested in booking the "${packageType}" program. Please guide me with consultation details.`;
-        const waUrl = `https://wa.me/918000000000?text=${encodeURIComponent(customMessage)}`;
+        const waUrl = `https://wa.me/918610530654?text=${encodeURIComponent(customMessage)}`;
         window.open(waUrl, '_blank');
       }
     });

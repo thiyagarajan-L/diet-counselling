@@ -57,7 +57,7 @@ diet-counselling/
 
 - **Email**: `nuvitabykrish@gmail.com`
 - **Instagram**: `@nuvitabykrish` (`https://instagram.com/nuvitabykrish`)
-- **WhatsApp**: `+91 8*********`
+- **WhatsApp**: `+91 8610530654`
 - **Location**: Chennai, Tamil Nadu, India
 
 ---
