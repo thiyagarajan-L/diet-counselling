@@ -32,6 +32,208 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Inline Style Override for Consultation Packages Layout to prevent Cache Issues -->
+  <style>
+    .packages-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1rem !important;
+      align-items: stretch !important;
+    }
+
+    .package-card {
+      background: var(--bg-surface) !important;
+      border-radius: var(--radius-lg) !important;
+      padding: 1.5rem 1.15rem !important;
+      border: 1px solid var(--border-color) !important;
+      box-shadow: var(--shadow-sm) !important;
+      position: relative !important;
+      transition: var(--transition) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+
+    .package-card.popular {
+      border: 2px solid var(--primary) !important;
+      box-shadow: var(--shadow-lg) !important;
+      transform: scale(1.02) !important;
+      z-index: 2 !important;
+      padding-top: 2.25rem !important;
+    }
+
+    .popular-badge {
+      font-size: 0.65rem !important;
+      font-weight: 800 !important;
+      padding: 0.2rem 0.85rem !important;
+      letter-spacing: 0.5px !important;
+      top: -11px !important;
+    }
+
+    .package-badge {
+      display: inline-block !important;
+      padding: 0.2rem 0.6rem !important;
+      font-size: 0.68rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      background: var(--secondary-light) !important;
+      color: var(--secondary) !important;
+      border-radius: var(--radius-full) !important;
+      margin-bottom: 0.5rem !important;
+      letter-spacing: 0.5px !important;
+    }
+
+    .package-card.popular .package-badge {
+      background: var(--primary-light) !important;
+      color: var(--primary) !important;
+    }
+
+    .package-header {
+      padding-bottom: 0.75rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .package-header h3 {
+      font-size: 1.25rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+
+    .package-duration {
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: var(--primary) !important;
+    }
+
+    .package-price-box {
+      margin: 0.75rem 0 0.5rem 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .package-price-amount {
+      font-size: 1.75rem !important;
+      font-weight: 800 !important;
+      color: var(--text-main) !important;
+      line-height: 1 !important;
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 0.15rem !important;
+    }
+
+    .package-price-period {
+      font-size: 0.7rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      color: var(--text-muted) !important;
+      letter-spacing: 0.5px !important;
+      margin-top: 0.25rem !important;
+      background: var(--bg-alt) !important;
+      padding: 0.15rem 0.5rem !important;
+      border-radius: var(--radius-sm) !important;
+      display: inline-block !important;
+    }
+
+    .package-price-subtext {
+      font-size: 0.78rem !important;
+      color: var(--text-muted) !important;
+      font-weight: 600 !important;
+      margin-top: 0.25rem !important;
+    }
+
+    .package-best-for {
+      background: var(--bg-alt) !important;
+      border-radius: var(--radius-sm) !important;
+      padding: 0.6rem 0.75rem !important;
+      font-size: 0.78rem !important;
+      color: var(--text-main) !important;
+      margin-bottom: 1rem !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 0.5rem !important;
+      text-align: left !important;
+      border-left: 2px solid var(--secondary) !important;
+      line-height: 1.35 !important;
+    }
+
+    .package-card.popular .package-best-for {
+      border-left-color: var(--primary) !important;
+    }
+
+    .package-best-for i {
+      color: var(--secondary) !important;
+      margin-top: 0.15rem !important;
+      font-size: 0.9rem !important;
+      flex-shrink: 0 !important;
+    }
+
+    .package-card.popular .package-best-for i {
+      color: var(--primary) !important;
+    }
+
+    .package-best-for span {
+      display: block !important;
+    }
+
+    .package-best-for strong {
+      display: block !important;
+      font-size: 0.7rem !important;
+      text-transform: uppercase !important;
+      color: var(--text-muted) !important;
+      margin-bottom: 0.1rem !important;
+    }
+
+    .package-list {
+      margin-bottom: 1.25rem !important;
+      flex-grow: 1 !important;
+    }
+
+    .package-list li {
+      font-size: 0.8rem !important;
+      margin-bottom: 0.4rem !important;
+      line-height: 1.35 !important;
+    }
+
+    .package-card .btn {
+      padding: 0.6rem 1rem !important;
+      font-size: 0.85rem !important;
+    }
+
+    @media (max-width: 1150px) {
+      .packages-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1.5rem !important;
+        padding: 1.5rem 1.5rem 2.5rem 1.5rem !important;
+        margin: 0 -1.5rem !important;
+        scrollbar-width: thin !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+      
+      .packages-grid::-webkit-scrollbar {
+        height: 6px !important;
+      }
+      
+      .packages-grid::-webkit-scrollbar-track {
+        background: transparent !important;
+      }
+      
+      .packages-grid::-webkit-scrollbar-thumb {
+        background: var(--border-color) !important;
+        border-radius: var(--radius-full) !important;
+      }
+      
+      .package-card {
+        flex: 0 0 310px !important;
+        scroll-snap-align: center !important;
+        transform: none !important;
+        padding: 1.5rem 1.25rem !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -216,57 +418,129 @@
       </div>
 
       <div class="packages-grid">
-        <!-- 1 Month -->
+        <!-- 1. Essentials (One-Time Plan) -->
         <div class="package-card">
           <div class="package-header">
-            <h3>1 Month Kickstart</h3>
-            <div class="package-duration">4 Weeks Guidance</div>
+            <span class="package-badge">One-Time Plan</span>
+            <h3>Essentials</h3>
+            <div class="package-duration">Single Session • No Follow-up</div>
+            <div class="package-price-box">
+              <span class="package-price-amount">₹1,999</span>
+              <span class="package-price-period">One Time</span>
+            </div>
           </div>
           <ul class="package-list">
-            <li><i class="fa-solid fa-check"></i> Detailed 1-on-1 Initial Consultation</li>
-            <li><i class="fa-solid fa-check"></i> Personalized Meal Chart (2 Plan Revisions)</li>
-            <li><i class="fa-solid fa-check"></i> Weekly Progress Check-ins</li>
-            <li><i class="fa-solid fa-check"></i> WhatsApp Support (Mon - Sat)</li>
-            <li><i class="fa-solid fa-check"></i> Healthy Recipe Guide</li>
+            <li><i class="fa-solid fa-phone"></i> 30-min Consultation Call</li>
+            <li><i class="fa-solid fa-user"></i> Basic Body Assessment & Goal Setting</li>
+            <li><i class="fa-solid fa-clipboard-list"></i> One Custom Diet Chart (Veg / Non-veg, Indian Meals)</li>
+            <li><i class="fa-solid fa-chart-pie"></i> Basic Macro Breakdown</li>
+            <li><i class="fa-regular fa-file-pdf"></i> Printable / PDF Diet Chart</li>
           </ul>
-          <button class="btn btn-outline trigger-whatsapp" data-package="1 Month Kickstart Package"
-            style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> Select 1 Month Plan</button>
+          <div class="package-best-for">
+            <i class="fa-solid fa-bullseye"></i>
+            <span>
+              <strong>Best For</strong>
+              Anyone who wants a professional starting point without ongoing coaching.
+            </span>
+          </div>
+          <button class="btn btn-outline trigger-whatsapp" data-package="Essentials One-Time Plan"
+            style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> Select Essentials Plan</button>
         </div>
 
-        <!-- 3 Month Transformation (Popular) -->
+        <!-- 2. Foundation (Basic Plan) -->
+        <div class="package-card">
+          <div class="package-header">
+            <span class="package-badge">Basic Plan</span>
+            <h3>Foundation</h3>
+            <div class="package-duration">1 Month • Online</div>
+            <div class="package-price-box">
+              <span class="package-price-amount">₹3,999</span>
+              <span class="package-price-period">Per Month</span>
+            </div>
+          </div>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-star"></i> Everything in Essentials</li>
+            <li><i class="fa-solid fa-utensils"></i> Fully Custom Meal Plan Based on Your Goal</li>
+            <li><i class="fa-solid fa-desktop"></i> 1 Online Consultation Call</li>
+            <li><i class="fa-solid fa-calendar-days"></i> Weekly Check-in (Weight & Progress Photos)</li>
+            <li><i class="fa-solid fa-pen"></i> 1 Plan Revision During the Month</li>
+            <li><i class="fa-brands fa-whatsapp"></i> WhatsApp Support (Business Hours)</li>
+            <li><i class="fa-solid fa-chart-bar"></i> Progress Tracking</li>
+          </ul>
+          <div class="package-best-for">
+            <i class="fa-solid fa-trophy"></i>
+            <span>
+              <strong>Best For</strong>
+              Gym-goers testing coaching before committing longer term.
+            </span>
+          </div>
+          <button class="btn btn-outline trigger-whatsapp" data-package="Foundation Basic Plan" style="width: 100%;"><i
+              class="fa-brands fa-whatsapp"></i> Select Foundation Plan</button>
+        </div>
+
+        <!-- 3. Momentum (Standard Plan) -->
+        <div class="package-card">
+          <div class="package-header">
+            <span class="package-badge">Standard Plan</span>
+            <h3>Momentum</h3>
+            <div class="package-duration">3 Months • Online + Offline</div>
+            <div class="package-price-box">
+              <span class="package-price-amount">₹9,999</span>
+              <span class="package-price-period">Total (3 Months)</span>
+              <span class="package-price-subtext">≈ ₹3,333 / month</span>
+            </div>
+          </div>
+          <ul class="package-list">
+            <li><i class="fa-solid fa-star"></i> Everything in Foundation</li>
+            <li><i class="fa-solid fa-arrows-rotate"></i> Plan Revised Every 2–3 Weeks as You Progress</li>
+            <li><i class="fa-solid fa-calendar-days"></i> Bi-weekly Check-ins</li>
+            <li><i class="fa-solid fa-dumbbell"></i> 1 In-person Session at Your Gym</li>
+            <li><i class="fa-brands fa-whatsapp"></i> Priority WhatsApp Support</li>
+            <li><i class="fa-solid fa-heart"></i> Habit & Lifestyle Coaching (Sleep, Hydration, Stress Management)</li>
+            <li><i class="fa-solid fa-plane"></i> Travel & Festival Diet Adjustments</li>
+          </ul>
+          <div class="package-best-for">
+            <i class="fa-solid fa-bullseye"></i>
+            <span>
+              <strong>Best For</strong>
+              Clients aiming for visible body composition change.
+            </span>
+          </div>
+          <button class="btn btn-outline trigger-whatsapp" data-package="Momentum Standard Plan" style="width: 100%;"><i
+              class="fa-brands fa-whatsapp"></i> Select Momentum Plan</button>
+        </div>
+
+        <!-- 4. Elite Transformation (Premium Plan - Popular) -->
         <div class="package-card popular">
           <div class="popular-badge">Most Popular</div>
           <div class="package-header">
-            <h3>3 Month Transformation</h3>
-            <div class="package-duration">12 Weeks Complete Overhaul</div>
+            <span class="package-badge">Premium Plan</span>
+            <h3>Elite Transformation</h3>
+            <div class="package-duration">6 Months • Online + Offline</div>
+            <div class="package-price-box">
+              <span class="package-price-amount">₹17,999</span>
+              <span class="package-price-period">Total (6 Months)</span>
+              <span class="package-price-subtext">≈ ₹3,000 / month</span>
+            </div>
           </div>
           <ul class="package-list">
-            <li><i class="fa-solid fa-check"></i> In-depth Medical & Lifestyle Analysis</li>
-            <li><i class="fa-solid fa-check"></i> Dynamic Bi-Weekly Meal Revisions</li>
-            <li><i class="fa-solid fa-check"></i> Weekly Call & Body Metric Tracking</li>
-            <li><i class="fa-solid fa-check"></i> Priority WhatsApp Support</li>
-            <li><i class="fa-solid fa-check"></i> Dining Out & Travel Diet Playbook</li>
-            <li><i class="fa-solid fa-check"></i> PCOS / Diabetes / Weight Loss Specialist Protocol</li>
+            <li><i class="fa-solid fa-star"></i> Everything in Momentum</li>
+            <li><i class="fa-solid fa-infinity"></i> Plan Adjustments as Needed Based on Progress</li>
+            <li><i class="fa-solid fa-calendar-days"></i> Weekly Check-ins with Progress Tracking Sheet</li>
+            <li><i class="fa-solid fa-users"></i> 3 In-person Sessions (Once Every 2 Months)</li>
+            <li><i class="fa-solid fa-bolt"></i> Priority WhatsApp Support with Faster Response</li>
+            <li><i class="fa-solid fa-prescription-bottle-medical"></i> Supplement Guidance (If Applicable)</li>
+            <li><i class="fa-solid fa-chart-line"></i> Body Composition Tracking & Monthly Report</li>
           </ul>
-          <button class="btn btn-primary trigger-whatsapp" data-package="3 Month Transformation Package"
-            style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> Select 3 Month Plan</button>
-        </div>
-
-        <!-- 6 Month Lifestyle -->
-        <div class="package-card">
-          <div class="package-header">
-            <h3>6 Month Lifestyle Reset</h3>
-            <div class="package-duration">24 Weeks Total Mastery</div>
+          <div class="package-best-for">
+            <i class="fa-solid fa-bullseye"></i>
+            <span>
+              <strong>Best For</strong>
+              Serious, long-term transformation goals.
+            </span>
           </div>
-          <ul class="package-list">
-            <li><i class="fa-solid fa-check"></i> Complete Metabolic & Lifestyle Overhaul</li>
-            <li><i class="fa-solid fa-check"></i> Monthly Lab Test & Biomarker Audits</li>
-            <li><i class="fa-solid fa-check"></i> Unlimited Diet Customizations</li>
-            <li><i class="fa-solid fa-check"></i> 24/7 VIP Chat Support</li>
-            <li><i class="fa-solid fa-check"></i> Maintenance Phase Transition Plan</li>
-          </ul>
-          <button class="btn btn-outline trigger-whatsapp" data-package="6 Month Reset Package" style="width: 100%;"><i
-              class="fa-brands fa-whatsapp"></i> Select 6 Month Plan</button>
+          <button class="btn btn-primary trigger-whatsapp" data-package="Elite Transformation Premium Plan"
+            style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> Select Elite Transformation Plan</button>
         </div>
       </div>
     </div>
